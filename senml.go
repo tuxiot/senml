@@ -170,10 +170,12 @@ func Normalize(p Pack) (Pack, error) {
 		}
 
 		// Remove Base Values from the Record.
+		// Keep basename as is, as it is used to resolve the service of the message.
+		// I.e. we assume basename is the service name.
+		// the basename+name is the name of the measurement.
 		r.BaseTime = 0
 		r.BaseValue = 0
 		r.BaseUnit = ""
-		r.BaseName = ""
 		r.BaseSum = 0
 		records[i] = r
 	}

@@ -1,9 +1,10 @@
-module github.com/mainflux/senml
+module github.com/tuxiot/senml
 
 go 1.17
 
 require (
 	github.com/fxamacker/cbor/v2 v2.3.0
+	github.com/mainflux/senml v1.5.0
 	github.com/stretchr/testify v1.7.0
 )
 

@@ -18,10 +18,3 @@ jobs:
     - name: test
       run: |
         go test -v -race -tags test -coverprofile=profile.out -covermode=atomic ./...
-
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v1
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        file: ./profile.out
-        name: codecov
